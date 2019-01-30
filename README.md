@@ -4,6 +4,6 @@ This project has helped give me a better understanding of PSP, project planning 
 
 TODOs:
 - [DONE] create game logic for game in Connect4.java
-- [DONE] create user interface for the game to be played in a text console.
+- [DONE] create user interface for the game to be played in text console.
 - [DONE] create naive computer AI for simple computer-based play.
 - [WIP] create functional GUI application for game.
