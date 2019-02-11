@@ -1,4 +1,4 @@
-# Connect4: What I've Learned
+# Connect4 Game: What I've Learned
 This is a simple implementation of Connect Four in Java for class, and the first project with some autonomy given for project creation, design and implementation.
 This project has helped give me a better understanding of PSP, project planning and design pocess, object-oriented programming, user interface and interaction, I/O and GUI design and interaction, and javadoc generation.  
 
