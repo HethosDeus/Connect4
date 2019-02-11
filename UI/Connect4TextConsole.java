@@ -26,9 +26,7 @@ class Connect4TextConsole {
     private Connect4 game_board = new Connect4();
     /**static Scanner to handle all inputs outside of the startGame() method. */
     static Scanner scan = new Scanner(System.in);
-    /**Connect4ComputerPlayer object to initialize and play against the 
-     * computer.
-     */
+    /**Connect4ComputerPlayer object to initialize and play against the computer.    */
     private Connect4ComputerPlayer compAI = new Connect4ComputerPlayer();
 	
     
