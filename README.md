@@ -6,4 +6,6 @@ TODOs:
 - [DONE] create game logic for game in Connect4.java
 - [DONE] create user interface for the game to be played in text console.
 - [DONE] create naive computer AI for simple computer-based play.
-- [WIP] create functional GUI application for game.
+- [DONE] create functional GUI application for game.
+- [WIP] create client/server applications to play game online.
+- [WIP] refine and refactor existing code
