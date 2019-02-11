@@ -78,7 +78,17 @@ public class Connect4 {
     {
         return winner;
     }
-	
+
+    /**
+     * Randomizes the first move so that red will not always go first. 
+     * @return Red is result is 0; Yellow if result is 1.
+     */
+    private String RandomizeFirstMove()
+    {
+        Random rand = new Random();
+        int res = rand.nextInt(2);
+        return (res == 0) ? RED : YELLOW;
+    }
 		
     /**drawBoard()  draws the game board in its current state, and lets user
      * know how many pieces they have left to use.
