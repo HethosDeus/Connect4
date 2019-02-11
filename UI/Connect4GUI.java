@@ -293,7 +293,7 @@ public class Connect4GUI extends Application implements Connect4Constants {
     }
 
     /**
-     * Void method to launch 2-player GUI game.
+     * Void method to launch 1-player GUI game.
      * @param stage Passes new stage to create game window.
      */
     public void local1Player(Stage stage) 
