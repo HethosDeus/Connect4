@@ -32,11 +32,13 @@ class Connect4TextConsole {
     private Connect4ComputerPlayer compAI = new Connect4ComputerPlayer();
 	
     
-    /**main()   entry point for the game. */
-    public static void main (String[] args)
+    /**
+     * Constructor to make a text console game object.
+     * @param game Connect4 object to use
+     */
+    public Connect4TextConsole(Connect4 game)
     {
-        Connect4TextConsole start = new Connect4TextConsole();  
-        start.startGame();
+        this.game_board = game;
     }
         
     
