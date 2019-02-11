@@ -17,12 +17,8 @@ import java.util.Arrays;
  *  @author Adam Clifton, SER 216
  *  @version 1.1
 */
-public class Connect4 {
+public class Connect4 implements Connect4Constants {
 
-    /** ROW to hold number of rows on game board.*/
-    private final static int ROW = 6;
-    /** COL to hold number of columns on game board.*/
-    private final static int COL = 7;
     /** Game board where the game is played.*/
     private String[][] gameBoard;
     /** Player Token to designate game piece X or O. */
