@@ -3,22 +3,22 @@
  */
 package ui;
 
-import Core.Connect4;
-import Core.Connect4ComputerPlayer;
+import core.Connect4;
+import core.Connect4ComputerPlayer;
 import java.util.InputMismatchException;
 import java.util.Scanner;
  
  /** This class is the user UI and input for the connect4 game.  Handles all 
   * user input, and calls Connect4 methods for logic in the program.
   * <p>
- *  Required for Functionality: 
- *  <ul>
- *  <li>Connect4TextConsole.java
- *  <li>Connect4ComputerPlayer.java
- *  </ul>
+  * Required for Functionality: 
+  * <ul>
+  * <li>Connect4TextConsole.java
+  * <li>Connect4ComputerPlayer.java
+  * </ul>
   * <p>
-  * @author Adam Clifton, SER 216
-  * @version 1.1
+  * @author Adam Clifton
+  * @version 2.0
   */
 class Connect4TextConsole {
     
@@ -26,10 +26,12 @@ class Connect4TextConsole {
     private Connect4 game_board = new Connect4();
     /**static Scanner to handle all inputs outside of the startGame() method. */
     static Scanner scan = new Scanner(System.in);
-    /**Connect4ComputerPlayer object to initialize and play against the computer.    */
+    /**Connect4ComputerPlayer object to initialize and play against the 
+     * computer.
+     */
     private Connect4ComputerPlayer compAI = new Connect4ComputerPlayer();
-	
-    
+
+
     /**
      * Constructor to make a text console game object.
      * @param game Connect4 object to use
@@ -38,7 +40,6 @@ class Connect4TextConsole {
     {
         this.game_board = game;
     }
-        
     
     /**startGame()    Initializing the game, gets user input. */
     public void startGame()
@@ -207,7 +208,8 @@ class Connect4TextConsole {
                 System.out.println("That is not a number. Please select a valid"
                         + " column.");
                 //catch weird input and do nothing
-                String temp = scan.nextLine();            
+                String consume = scan.nextLine();      
+                consume.replace("", "");
             }
         }
         
@@ -219,7 +221,7 @@ class Connect4TextConsole {
             if(token.equals("X"))
             {
                 System.out.println("CONGRATULATIONS!");
-                System.out.println("Player X has won the game!  Game over." );
+                System.out.println("Player X has won thec game!  Game over." );
                 System.exit(0);
             } else {
                 System.out.println("CONGRATULATIONS!");
