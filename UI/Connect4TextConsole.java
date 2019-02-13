@@ -1,7 +1,7 @@
 /**UI contains the Connect4TextConsole.java file.  This is the user interface for 
  * I/O in the text console for the game.
  */
-package UI;
+package ui;
 
 import Core.Connect4;
 import Core.Connect4ComputerPlayer;
