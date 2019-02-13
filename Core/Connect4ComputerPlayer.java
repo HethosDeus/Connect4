@@ -14,8 +14,8 @@ import java.util.Random;
  *  <li>Connect4ComputerPlayer.java
  *  </ul>
  *  <p>
- *  @author Adam Clifton, SER 216
- *  @version 1.1
+ *  @author Adam Clifton (akclifto.asu.edu), SER 216
+ *  @version 1.5
 */
 public class Connect4ComputerPlayer extends Connect4 {
     
@@ -42,4 +42,6 @@ public class Connect4ComputerPlayer extends Connect4 {
     {
         return compMove;
     }
+    
+    
 }
