@@ -4,6 +4,7 @@
 package core;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /** This is an implementation of Connect Four.  This class handles all of 
  *  the logic aspects of the program.  
@@ -14,15 +15,15 @@ import java.util.Arrays;
  *  <li>Connect4ComputerPlayer.java
  *  </ul>
  *  <p>
- *  @author Adam Clifton, SER 216
- *  @version 1.1
+ *  @author Adam Clifton
+ *  @version 2.0
 */
 public class Connect4 implements Connect4Constants {
 
     /** Game board where the game is played.*/
     private String[][] gameBoard;
     /** Player Token to designate game piece X or O. */
-    private String playerToken = "X";
+    private String playerToken = RED;
     /** Game piece counters for player X.*/
     private int gamePiecesX = 21;
     /** Game piece counters for player O.*/
@@ -33,8 +34,8 @@ public class Connect4 implements Connect4Constants {
     private int turnCount = 1;
 
     
-    /** Connect4() 	Constructor initializes board and sets all inputs to 
-     * empty space.
+    /** 
+     * Constructor initializes board and sets all inputs to empty space.
      */
     public Connect4()
     {
@@ -43,9 +44,12 @@ public class Connect4 implements Connect4Constants {
     }
 	
  
-    /**reset() 	Sets all rows and columns to empty space. */
+    /**reset() 	Sets all rows and columns to empty space and randomly selects
+     * first move.
+     */
     private void reset()
     {
+        playerToken = RandomizeFirstMove();
 	for(String[]row : gameBoard)
 	{
             Arrays.fill(row, " ");
@@ -74,7 +78,8 @@ public class Connect4 implements Connect4Constants {
     {
         return winner;
     }
-
+    
+    
     /**
      * Randomizes the first move so that red will not always go first. 
      * @return Red is result is 0; Yellow if result is 1.
@@ -106,7 +111,7 @@ public class Connect4 implements Connect4Constants {
             System.out.println();
         }
         
-        if (playerToken.equals("X"))
+        if (playerToken.equals(RED))
         {
             System.out.println("Player X has " + gamePiecesX + " tokens left.");
             gamePiecesX--;
@@ -118,7 +123,8 @@ public class Connect4 implements Connect4Constants {
 	
     
         
-    /**drawBoardAI() draws the game board in its current state, and
+    /**
+     * drawBoardAI() draws the game board in its current state, and
      * lets user know if it is their turn or the computer's turn.  To be used
      * when playing against the computer. 
      * <p>
@@ -203,11 +209,11 @@ public class Connect4 implements Connect4Constants {
      */
     public void playerTurn(String pPlayerToken)
     {
-        if (pPlayerToken.equals("X"))
+        if (pPlayerToken.equals(RED))
         {
-            playerToken = "O";
+            playerToken = YELLOW;
         } else {
-            playerToken = "X";
+            playerToken = RED;
         }
         turnCount++;
     }
@@ -291,5 +297,7 @@ public class Connect4 implements Connect4Constants {
             }
         }
         return false;
-    }
+    }    
 }
+
+
