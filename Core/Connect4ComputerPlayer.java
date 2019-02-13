@@ -1,7 +1,7 @@
 /**Core contains Connect4.java, and Connect4ComputerPlayer.java.
  * This contains the logic for the game.
  */
-package Core;
+package core;
 
 import java.util.Random;
 
